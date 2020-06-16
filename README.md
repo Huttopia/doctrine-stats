@@ -1,10 +1,8 @@
-[![version](https://img.shields.io/badge/version-1.3.3-green.svg)](https://github.com/steevanb/doctrine-stats/tree/1.3.3)
+[![version](https://img.shields.io/badge/version-1.3.4-green.svg)](https://github.com/huttopia/doctrine-stats/tree/1.3.4)
 [![doctrine](https://img.shields.io/badge/doctrine/orm-^2.4.8-blue.svg)](http://www.doctrine-project.org)
 [![php](https://img.shields.io/badge/php-^5.4.6%20||%20^7.0-blue.svg)](http://www.php.net)
 ![Lines](https://img.shields.io/badge/code%20lines-2153-green.svg)
-![Total Downloads](https://poser.pugx.org/steevanb/doctrine-stats/downloads)
 [![SensionLabsInsight](https://img.shields.io/badge/SensionLabsInsight-platinum-brightgreen.svg)](https://insight.sensiolabs.com/projects/884a7b62-bb7a-41dc-8198-6d2bb0694795/analyses/28)
-[![Scrutinizer](https://scrutinizer-ci.com/g/steevanb/doctrine-stats/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/steevanb/doctrine-stats/)
 
 ### doctrine-stats
 
@@ -20,7 +18,7 @@ Add important Doctrine statistics :
 ### Installation
 
 ```bash
-composer require --dev "steevanb/doctrine-stats": "^1.3.3"
+composer require --dev "huttopia/doctrine-stats": "^1.3.4"
 ```
 
 If you want to add hydration time to your statistics :
@@ -67,30 +65,27 @@ If you want to add hydration time to your statistics :
 }
 ```
 ```bash
-composer update steevanb/composer-overload-class
+composer update huttopia/composer-overload-class
 ```
 
 ### Symfony 2.x, 3.x and 4.x integration
 
 Read Installation paragraph before.
 
+#### Symfony 5.x
+
 ```php
-### app/AppKernel.php
-class AppKernel
-{
-    public function registerBundles()
-    {
-        if ($this->getEnvironment() === 'dev') {
-            $bundles[] = new \steevanb\DoctrineStats\Bridge\DoctrineStatsBundle\DoctrineStatsBundle();
-        }
-    }
-}
+### config/bundles.php
+return [
+    // ...
+    \steevanb\DoctrineStats\Bridge\DoctrineStatsBundle\DoctrineStatsBundle::class => ['dev' => true]
+];
 ```
 
 If you want to add lazy loaded entities to your statistics :
 
 ```yml
-### app/config/config_dev.yml
+### config/services.yaml
 parameters:
     doctrine.orm.entity_manager.class: steevanb\DoctrineStats\Doctrine\ORM\EntityManager
 ```

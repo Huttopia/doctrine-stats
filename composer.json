@@ -1,5 +1,5 @@
 {
-    "name": "steevanb/doctrine-stats",
+    "name": "huttopia/doctrine-stats",
     "license": "MIT",
     "description": "Count managed entities and lazy loaded entities, hydration time, etc",
     "minimum-stability": "dev",
@@ -12,7 +12,7 @@
     },
     "require": {
         "php" : "^5.4.0 || ^7.0",
-        "doctrine/orm": "^2.4.8"
+        "doctrine/orm": "^2.9"
     },
     "suggest": {
         "steevanb/composer-overload-class ^1.0": "Add hydration time to statistics",
@@ -21,7 +21,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/steevanb/doctrine-stats.git"
+            "url": "https://github.com/Huttopia/doctrine-stats.git"
         }
     ]
 }

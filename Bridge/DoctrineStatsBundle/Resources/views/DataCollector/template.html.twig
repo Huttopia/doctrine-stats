@@ -377,7 +377,7 @@
             </tr>
             </thead>
             <tbody>
-            {% for hydrator,time in collector.getHydrationTimesByHydrator() %}
+            {% for hydrator, time in collector.getHydrationTimesByHydrator() %}
                 {% set countHydratedEntities = collector.countHydratedEntities(hydrator) %}
                 <tr>
                     <td>{{ '%0.2f'|format(time) }} ms</td>

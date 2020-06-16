@@ -1,5 +1,5 @@
 {
-    "name": "steevanb/doctrine-stats",
+    "name": "huttopia/doctrine-stats",
     "license": "MIT",
     "description": "Count managed entities and lazy loaded entities, hydration time, etc",
     "minimum-stability": "dev",

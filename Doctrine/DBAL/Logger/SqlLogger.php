@@ -35,7 +35,7 @@ class SqlLogger implements SQLLoggerInterface
      * @param array|null $types
      * @throws \Exception
      */
-    public function startQuery($sql, array $params = null, array $types = null)
+    public function startQuery($sql, array $params = null, array $types = null): void
     {
         if ($this->backtraceEnabled) {
             $isDumpBacktrace = class_exists('\DumpBacktrace');
@@ -61,7 +61,7 @@ class SqlLogger implements SQLLoggerInterface
         ];
     }
 
-    public function stopQuery()
+    public function stopQuery(): void
     {
         $this->queries[$this->currentQueryIndex]['time'] = microtime(true) - $this->start;
     }
